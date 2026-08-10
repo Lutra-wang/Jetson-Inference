@@ -1,0 +1,32 @@
+{
+  "camera": {
+    "uri": "/dev/video0",
+    "width": 640,
+    "height": 480,
+    "fps": 30
+  },
+  "detector": {
+    "backend": "mock",
+    "network": "ssd-mobilenet-v2",
+    "threshold": 0.5,
+    "target_class": "person"
+  },
+  "policy": {
+    "target_class": "person",
+    "center_deadband": 0.12,
+    "max_linear_x": 0.18,
+    "max_angular_z": 0.6,
+    "stop_area_ratio": 0.32,
+    "lost_frames_to_stop": 6
+  },
+  "transport": {
+    "mode": "stdout",
+    "udp_host": "127.0.0.1",
+    "udp_port": 8765
+  },
+  "web": {
+    "host": "0.0.0.0",
+    "port": 5000
+  }
+}
+
